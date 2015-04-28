@@ -1,0 +1,12 @@
+CREATE TABLE Games (
+    GameId UNIQUEIDENTIFIER NOT NULL CONSTRAINT
+		DF_Game_Id DEFAULT NEWSEQUENTIALID(),
+    GameCode VARCHAR(30),
+    GameName VARCHAR(255),
+    CreatedDate DATETIME2,
+    CreatedBy VARCHAR(255),
+    UpdatedDate DATETIME2,
+    UpdatedBy VARCHAR(255),
+    CONSTRAINT PK_Game
+        PRIMARY KEY (GameId)
+);
